@@ -1,0 +1,19 @@
+CREATE DATABASE lava_jato;
+
+USE lava_jato;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    tipo ENUM('cliente', 'admin') NOT NULL
+);
+
+CREATE TABLE horarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    data DATE NOT NULL,
+    horario TIME NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
