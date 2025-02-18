@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cadastrar'])) {
                                 
                         <!-- seleção de tipo com cliente e admin disponível -->
                         <div class="form-group">
-                            <label for="tipo">Tipo:</label>
+                            <label for="tipo">Selecione Barbeiro:</label>
                             <select name="tipo" class="form-control" required>
                                 <option value="cliente">Cliente</option>
                                 <option value="admin">Admin</option>  
